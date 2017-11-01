@@ -35,5 +35,13 @@ namespace MSPCloudSite.Controllers
         {
             return View();
         }
+        public ActionResult SupportContracts()
+        {
+            return View();
+        }
+        public ActionResult AdHocSupport()
+        {
+            return View();
+        }
     }
 }

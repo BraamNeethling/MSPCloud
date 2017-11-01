@@ -1,0 +1,41 @@
+﻿@model dynamic
+
+@{
+    ViewBag.Title = "MSPCloud Ad-Hoc Support";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<p>
+    MSPCloud Ad-hoc support can assist you remotely or on site with any IT related issue no matter how big or small the problem. <br />
+    MSPCloud provides professional IT support on all your IT equipment. <br />
+    We specialize in providing technical support for all major IT systems.
+</p>
+<br />
+<p>
+    Contact us for a solution that fits your budget and unique requirements.
+</p>
+<br />
+<h2>Contact Us Support</h2>
+<p id="contact">
+    Back to Contact Us Page
+</p>
+<br />
+<br />
+
+<h2>SOS</h2>
+<br />
+<p>
+    <a href="http://sos.splashtop.com/">remote support download page </a>
+</p>
+
+
+<script type="text/javascript">
+    var redirectContactUs = '@Url.Action("Contact")';
+    $("p#contact").on("click",
+        function () {
+            window.location.href = redirectContactUs;
+        });
+
+</script>

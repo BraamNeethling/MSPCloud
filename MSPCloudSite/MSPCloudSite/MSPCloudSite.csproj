@@ -155,6 +155,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="js\MSPCloudServices\MSPCloudServices.js" />
     <Content Include="Resources\MSPCloud Logo.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -189,6 +190,8 @@
     <Content Include="Views\Home\MSPCloudServices.cshtml" />
     <Content Include="Views\Home\PartnerServices.cshtml" />
     <Content Include="Views\Home\Careers.cshtml" />
+    <Content Include="Views\Home\SupportContracts.cshtml" />
+    <Content Include="Views\Home\AdHocSupport.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

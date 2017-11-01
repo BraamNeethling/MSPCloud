@@ -6,3 +6,51 @@
 }
 
 <h2>@ViewBag.Title</h2>
+
+<ul class="menu">
+    <li id="listSupportContracts">MSPCloud Support Contracts</li>
+    <li>
+        <ul class="submenu">
+            <li id="listSilver">Silver</li>
+            <li id="listGold">Gold</li>
+            <li id="listPlatinum">Platinum</li>
+            <li>
+                <ul class="submenu">
+                    <li id="listPermanentSupport">Permanent on-site support</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li id="listAdHoc">MSPCloud Ad-hoc Support</li>
+    <li id="listCalculator">Online Estimate Calculator</li>
+</ul>
+<script type="text/javascript">
+    var redirectSupportContracts = '@Url.Action("SupportContracts")';
+    $("li#listSupportContracts").on("click",
+        function () {
+            window.location.href = redirectSupportContracts;
+        });
+
+    var redirectAdHoc = '@Url.Action("AdHocSupport")';
+    $("li#listAdHoc").on("click",
+        function () {
+            window.location.href = redirectAdHoc;
+        });
+    $("li#listGold").on("click",
+        function () {
+            $("#mspCloudSupportServices").hide();
+            $("#platinum").hide();
+            $("#silver").hide();
+            $("#gold").show();
+        });
+
+    $("li#listSupportContracts").on("click",
+        function () {
+            $("#gold").hide();
+            $("#platinum").hide();
+            $("#silver").hide();
+            $("#mspCloudSupportServices").show();
+        });
+
+
+</script>
