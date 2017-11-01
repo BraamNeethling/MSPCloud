@@ -1,6 +1,54 @@
-﻿@{
+﻿@model MSPCloudSite.Models.MailModel
+
+@{
     ViewBag.Title = "Contact";
 }
 <h2>@ViewBag.Title.</h2>
 
+
+
+<h4>Send your comments.</h4>
+<hr />
+<div class="form-group">
+    @Html.LabelFor(m => m.FromName, new { @class = "col-md-2 control-label" })
+    <div class="col-md-10">
+        @Html.TextBoxFor(m => m.FromName, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.FromName)
+    </div>
+</div>
+<div class="form-group">
+    @Html.LabelFor(m => m.FromEmail, new { @class = "col-md-2 control-label" })
+    <div class="col-md-10">
+        @Html.TextBoxFor(m => m.FromEmail, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.FromEmail)
+    </div>
+</div>
+<div class="form-group">
+    @Html.LabelFor(m => m.Message, new { @class = "col-md-2 control-label" })
+    <div class="col-md-10">
+        @Html.TextAreaFor(m => m.Message, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Message)
+    </div>
+</div>
+<div class="form-group">
+    <div class="col-md-offset-2 col-md-10">
+        <input type="submit" id="sendEmail" class="btn btn-default" value="Send" />
+    </div>
+</div>
+
+
+<script type="text/javascript">
+    $("#sendEmail").on("click",
+        function () {
+            debugger;
+            var viewModel = {
+                FromName: $("#FromName").val(),
+                FromEmail: $("#FromEmail").val(),
+                Message: $("#Message").val()
+            };
+            var sendEmailUrl = '@Url.Action("SendEmail")';
+            $.post(sendEmailUrl, viewModel);
+        });
+
+</script>
 
