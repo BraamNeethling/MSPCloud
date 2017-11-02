@@ -158,6 +158,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="js\MSPCloudServices\MSPCloudServices.js" />
     <Content Include="Resources\MSPCloud Logo.png" />
+    <Content Include="Resources\MSPCloud Logojpeg.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">

@@ -81,4 +81,3 @@ C:\Users\braam\Documents\MSPCloud\MSPCloudSite\MSPCloudSite\bin\Microsoft.AI.Web
 C:\Users\braam\Documents\MSPCloud\MSPCloudSite\MSPCloudSite\obj\Debug\MSPCloudSite.csproj.CoreCompileInputs.cache
 C:\Users\braam\Documents\MSPCloud\MSPCloudSite\MSPCloudSite\obj\Debug\MSPCloudSite.dll
 C:\Users\braam\Documents\MSPCloud\MSPCloudSite\MSPCloudSite\obj\Debug\MSPCloudSite.pdb
-C:\Users\braam\Documents\MSPCloud\MSPCloudSite\MSPCloudSite\obj\Debug\MSPCloudSite.csprojResolveAssemblyReference.cache
