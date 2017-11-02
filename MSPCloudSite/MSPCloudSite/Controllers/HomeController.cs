@@ -32,9 +32,6 @@ namespace MSPCloudSite.Controllers
         public async Task SendEmail(MailModel model)
         {
             var message = SetMailMessage(model);
-
-
-
             using (var smtp = new SmtpClient())
             {
                 smtp.EnableSsl = true;
@@ -53,6 +50,16 @@ namespace MSPCloudSite.Controllers
             message.Body = string.Format(body, model.FromName, model.FromEmail, model.Message);
             message.IsBodyHtml = true;
 
+            var htmlView = SetEmailLogo(model);
+
+
+            message.AlternateViews.Add(htmlView);
+
+            return message;
+        }
+
+        private static AlternateView SetEmailLogo(MailModel model)
+        {
             var linkedImage =
                 new LinkedResource(
                     @"C:\Users\braam\Documents\MSPCloud\MSPCloudSite\MSPCloudSite\Resources\MSPCloud Logojpeg.jpg")
@@ -60,7 +67,6 @@ namespace MSPCloudSite.Controllers
                     ContentId = "Logo",
                     ContentType = new ContentType(MediaTypeNames.Image.Jpeg)
                 };
-            //Added the patch for Thunderbird as suggested by Jorge
 
             var htmlView = AlternateView.CreateAlternateViewFromString(
                 "<img src=cid:Logo><br/> " +
@@ -70,12 +76,7 @@ namespace MSPCloudSite.Controllers
                 null, "text/html");
 
             htmlView.LinkedResources.Add(linkedImage);
-
-
-
-            message.AlternateViews.Add(htmlView);
-
-            return message;
+            return htmlView;
         }
 
         public ActionResult MSPCloudServices()
