@@ -7,7 +7,7 @@ using MSPCloudSite.Models;
 
 namespace MSPCloudSite.Services
 {
-    public interface IMspCloudService
+    public interface IMailerService
     {
         Task SendEmail(MailModel model);
     }

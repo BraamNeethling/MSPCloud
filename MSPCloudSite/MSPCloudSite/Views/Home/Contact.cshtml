@@ -55,7 +55,16 @@
                 Message: $("#Message").val(),
                 ContactNumber: $("#ContactNumber").val()
             };
-            $.post(sendEmailUrl, viewModel);
+            $.post(sendEmailUrl, viewModel).then(function () {
+                swal({
+                    title: "Mail Successfully Sent!",
+                    text: "We have recieved your enquiry and wil do our utter best to respond!",
+                    type: "success",
+                    showConfirmButton: true,
+                    confirmButtonText: "Okey"
+               });
+                $.redirect("Index");
+            });
         });
 
 </script>

@@ -30,7 +30,7 @@ namespace MSPCloudSite.App_Start
      
         private static void InitializeContainer(Container container)
         {
-            container.Register<IMspCloudService, MspCloudService>();
+            container.Register<IMailerService, MailerService>();
         }
     }
 }

@@ -10,11 +10,11 @@ namespace MSPCloudSite.Controllers
    
     public class HomeController : Controller
     {
-        private readonly IMspCloudService _mspCloudService;
+        private readonly IMailerService _mailerService;
 
-        public HomeController(IMspCloudService mspCloudService)
+        public HomeController(IMailerService mailerService)
         {
-            this._mspCloudService = mspCloudService;
+            this._mailerService = mailerService;
         }
         public ActionResult Index()
         {
@@ -32,7 +32,7 @@ namespace MSPCloudSite.Controllers
         }
         public async Task SendEmail(MailModel model)
         {
-            await _mspCloudService.SendEmail(model);
+            await _mailerService.SendEmail(model);
         }
 
         public ActionResult MSPCloudServices()

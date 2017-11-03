@@ -9,7 +9,7 @@ using MSPCloudSite.Models;
 
 namespace MSPCloudSite.Services
 {
-    public class MspCloudService : IMspCloudService
+    public class MailerService : IMailerService
     {
         public async Task SendEmail(MailModel model)
         {
