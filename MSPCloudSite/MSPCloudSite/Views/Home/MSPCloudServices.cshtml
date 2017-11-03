@@ -26,15 +26,14 @@
 </ul>
 <script type="text/javascript">
     var redirectSupportContracts = '@Url.Action("SupportContracts")';
+    var redirectAdHoc = '@Url.Action("AdHocSupport")';
     $("li#listSupportContracts").on("click",
         function () {
-            window.location.href = redirectSupportContracts;
-        });
-
-    var redirectAdHoc = '@Url.Action("AdHocSupport")';
+            $.redirect(redirectSupportContracts);
+        });    
     $("li#listAdHoc").on("click",
         function () {
-            window.location.href = redirectAdHoc;
+            $.redirect(redirectAdHoc);
         });
     $("li#listGold").on("click",
         function () {
@@ -43,7 +42,6 @@
             $("#silver").hide();
             $("#gold").show();
         });
-
     $("li#listSupportContracts").on("click",
         function () {
             $("#gold").hide();
@@ -51,6 +49,5 @@
             $("#silver").hide();
             $("#mspCloudSupportServices").show();
         });
-
-
+  
 </script>

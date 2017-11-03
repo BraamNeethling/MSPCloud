@@ -82,3 +82,10 @@ C:\Users\braam\Documents\MSPCloud\MSPCloudSite\MSPCloudSite\obj\Debug\MSPCloudSi
 C:\Users\braam\Documents\MSPCloud\MSPCloudSite\MSPCloudSite\obj\Debug\MSPCloudSite.dll
 C:\Users\braam\Documents\MSPCloud\MSPCloudSite\MSPCloudSite\obj\Debug\MSPCloudSite.pdb
 C:\Users\braam\Documents\MSPCloud\MSPCloudSite\MSPCloudSite\obj\Debug\MSPCloudSite.csprojResolveAssemblyReference.cache
+C:\Users\braam\Documents\MSPCloud\MSPCloudSite\MSPCloudSite\bin\SimpleInjector.dll
+C:\Users\braam\Documents\MSPCloud\MSPCloudSite\MSPCloudSite\bin\SimpleInjector.Integration.Web.dll
+C:\Users\braam\Documents\MSPCloud\MSPCloudSite\MSPCloudSite\bin\SimpleInjector.Integration.Web.Mvc.dll
+C:\Users\braam\Documents\MSPCloud\MSPCloudSite\MSPCloudSite\bin\WebActivator.dll
+C:\Users\braam\Documents\MSPCloud\MSPCloudSite\MSPCloudSite\bin\SimpleInjector.xml
+C:\Users\braam\Documents\MSPCloud\MSPCloudSite\MSPCloudSite\bin\SimpleInjector.Integration.Web.xml
+C:\Users\braam\Documents\MSPCloud\MSPCloudSite\MSPCloudSite\bin\SimpleInjector.Integration.Web.Mvc.xml
