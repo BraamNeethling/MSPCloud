@@ -49,27 +49,24 @@
     var sendEmailUrl = '@Url.Action("SendEmail")';
     $("#sendEmail").on("click",
         function (e) {
-
+            e.preventDefault();
             var viewModel = {
                 FromName: $("#FromName").val(),
                 FromEmail: $("#FromEmail").val(),
                 Message: $("#Message").val(),
                 ContactNumber: $("#ContactNumber").val()
             };
-            //$.post(sendEmailUrl, viewModel).then(function () {
-            //    swal("File Shouldn't Be Empty!!", "Please select file", "error");
-            //    $.redirect("Index");
-            //});
-            e.preventDefault();
-            swal({
+            $.post(sendEmailUrl, viewModel).then(function () {
+                swal({
                     title: "We will be in touch!",
                     text: "Your request has been sent!",
                     type: "success",
                     confirmButtonColor: '#339900',
                     confirmButtonText: 'Yes, I am sure!',
-                    closeOnConfirm: true
-            }).then(function() {
-                $.redirect("Index");
+                    closeOnConfirm: false
+                }).then(function() {
+                    $.redirect("Index");
+                });
             });
         });
 
