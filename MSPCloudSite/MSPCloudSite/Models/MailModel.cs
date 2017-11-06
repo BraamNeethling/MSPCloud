@@ -14,7 +14,7 @@ namespace MSPCloudSite.Models
         public string FromEmail { get; set; }
         [Required]
         public string Message { get; set; }
-        [Required]
+        [Required, Display(Name = "Contact Number")]
         public string ContactNumber { get; set; }
 
     }
