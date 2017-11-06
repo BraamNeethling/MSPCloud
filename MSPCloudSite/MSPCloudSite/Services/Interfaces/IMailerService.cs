@@ -9,6 +9,6 @@ namespace MSPCloudSite.Services
 {
     public interface IMailerService
     {
-        Task SendEmail(MailModel model);
+        Task SendEmail(MailViewModel viewModel);
     }
 }

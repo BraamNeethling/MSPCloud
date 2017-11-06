@@ -6,7 +6,7 @@ using System.Web;
 
 namespace MSPCloudSite.Models
 {
-    public class MailModel
+    public class MailViewModel
     {
         [Required, Display(Name = "Your name")]
         public string FromName { get; set; }

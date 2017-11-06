@@ -11,9 +11,9 @@ namespace MSPCloudSite.Services
 {
     public class MailerService : IMailerService
     {
-        public async Task SendEmail(MailModel model)
+        public async Task SendEmail(MailViewModel viewModel)
         {
-            var message = SetMailMessage(model);
+            var message = SetMailMessage(viewModel);
             using (var smtp = new SmtpClient())
             {
                 smtp.EnableSsl = true;
@@ -21,24 +21,21 @@ namespace MSPCloudSite.Services
             }
         }
 
-        private static MailMessage SetMailMessage(MailModel model)
+        private static MailMessage SetMailMessage(MailViewModel viewModel)
         {
 
-            const string body = "<p>Email From: {0} ({1})</p><p>Message:</p><p>{2}</p><p>{3}</p>";
             var message = new MailMessage();
             message.To.Add(new MailAddress("braamneethling1991@gmail.com"));
             message.From = new MailAddress("braamneethling1991@gmail.com");
-            message.Subject = "Client Request" + " from " + model.FromName;
-            message.Body = string.Format(body, model.FromName, model.FromEmail, model.Message, model.ContactNumber);
+            message.Subject = "Client Request" + " from " + viewModel.FromName;
             message.IsBodyHtml = true;
-
-            var htmlView = SetEmailLogo(model);
+            var htmlView = SetEmailLogo(viewModel);
             message.AlternateViews.Add(htmlView);
 
             return message;
         }
 
-        private static AlternateView SetEmailLogo(MailModel model)
+        private static AlternateView SetEmailLogo(MailViewModel viewModel)
         {
             var linkedImage =
                 new LinkedResource(
@@ -51,10 +48,10 @@ namespace MSPCloudSite.Services
             var htmlView = AlternateView.CreateAlternateViewFromString(
                 "<div>" +
                 "<img src=cid:Logo><br/> " +
-                "From Name :" + model.FromName + "<br/>" +
-                "From Email :" + model.FromEmail + "<br/>" +
-                "Message :" + model.Message + "<br/>" +
-                "Contact Number :" + model.ContactNumber + "<br/>" +
+                "From Name :" + viewModel.FromName + "<br/>" +
+                "From Email :" + viewModel.FromEmail + "<br/>" +
+                "Message :" + viewModel.Message + "<br/>" +
+                "Contact Number :" + viewModel.ContactNumber + "<br/>" +
                 "</div>",
                 null, "text/html");
 

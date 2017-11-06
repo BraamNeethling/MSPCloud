@@ -30,9 +30,9 @@ namespace MSPCloudSite.Controllers
         {
             return View();
         }
-        public async Task SendEmail(MailModel model)
+        public async Task SendEmail(MailViewModel viewModel)
         {
-            await _mailerService.SendEmail(model);
+            await _mailerService.SendEmail(viewModel);
         }
 
         public ActionResult MSPCloudServices()
