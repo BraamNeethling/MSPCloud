@@ -1,11 +1,10 @@
-﻿var Fortel = Fortel || {};
-Fortel.OMS = Fortel.OMS || {};
-Fortel.OMS.Invoice = Fortel.OMS.Invoice || {};
-Fortel.OMS.Invoice.SubmitToCustomer = Fortel.OMS.Invoice.SubmitToCustomer || {};
+﻿var MSPCloud = MSPCloud || {};
+MSPCloud.Services = MSPCloud.Services || {};
+MSPCloud.Services.MSPCloudServices = MSPCloud.Services.MSPCloudServices || {};
+MSPCloud.Services.MSPCloudServices.SubmitToCustomer = MSPCloud.Services.MSPCloudServices.SubmitToCustomer || {};
 
 (function(ns) {
-    ns.bindFormLoad = function(redirectSupportContracts, redirectAdHoc) {
-
+    ns.bindFormLoad = function() {
     }
 
-})(Fortel.OMS.Invoice.SubmitToCustomer);
+})(MSPCloud.Services.MSPCloudServices.SubmitToCustomer);
