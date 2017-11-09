@@ -1,5 +1,3 @@
-using MSPCloudSite.Services;
-
 [assembly: WebActivator.PostApplicationStartMethod(typeof(MSPCloudSite.App_Start.SimpleInjectorInitializer), "Initialize")]
 
 namespace MSPCloudSite.App_Start
@@ -10,7 +8,8 @@ namespace MSPCloudSite.App_Start
     using SimpleInjector;
     using SimpleInjector.Integration.Web;
     using SimpleInjector.Integration.Web.Mvc;
-    
+    using MSPCloudSite.Services;
+
     public static class SimpleInjectorInitializer
     {
         /// <summary>Initialize the container and register it as MVC3 Dependency Resolver.</summary>
@@ -30,6 +29,10 @@ namespace MSPCloudSite.App_Start
      
         private static void InitializeContainer(Container container)
         {
+
+
+            // For instance:
+            // container.Register<IUserRepository, SqlUserRepository>(Lifestyle.Scoped);
             container.Register<IMailerService, MailerService>();
         }
     }

@@ -1,0 +1,2 @@
+H:\site\MSC\MSPCloudSite\MSPCloudSite\obj\Release\MSPCloudSite.csprojResolveAssemblyReference.cache
+H:\site\MSC\MSPCloudSite\MSPCloudSite\obj\Release\MSPCloudSite.csproj.CoreCompileInputs.cache

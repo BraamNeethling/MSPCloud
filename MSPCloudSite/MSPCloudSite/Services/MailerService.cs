@@ -39,7 +39,7 @@ namespace MSPCloudSite.Services
         {
             var linkedImage =
                 new LinkedResource(
-                    @"C:\Users\braam\Documents\MSPCloud\MSPCloudSite\MSPCloudSite\Resources\MSPCloud Logojpeg.jpg")
+                    @"H:\site\MSC\MSPCloudSite\MSPCloudSite\Resources\MSPCloud Logojpeg.jpg")
                 {
                     ContentId = "Logo",
                     ContentType = new ContentType(MediaTypeNames.Image.Jpeg)
