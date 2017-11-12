@@ -45,10 +45,6 @@ textarea {
     background-image: url('../Resources/mscloud-backdrop.jpg');
 }
 
-.sendEmailButton {
-    background-color: aqua;
-}
-
 .mailerForm {
     padding-top: 50px;
     padding-bottom: 50px;
@@ -123,8 +119,8 @@ textarea {
         -moz-box-sizing: border-box;
         width: 100%;
         padding: 3%;
-        background: #43D1AF;
-        border-bottom: 2px solid #30C29E;
+        background: #7CB3CD;
+        border-bottom: 2px solid #7CB3CD;
         border-top-style: none;
         border-right-style: none;
         border-left-style: none;
@@ -135,3 +131,62 @@ textarea {
         .form-style-6 input[type="button"]:hover {
             background: #2EBC99;
         }
+
+
+        /*COLORS HOVER ADDITIONS*/
+
+/*
+  https://developer.mozilla.org/en/docs/Web/CSS/box-shadow
+  box-shadow: [inset?] [top] [left] [blur] [size] [color];
+
+  Tips:
+    - We're setting all the blurs to 0 since we want a solid fill.
+    - Add the inset keyword so the box-shadow is on the inside of the element
+    - Animating the inset shadow on hover looks like the element is filling in from whatever side you specify ([top] and [left] accept negative values to become [bottom] and [right])
+    - Multiple shadows can be stacked
+    - If you're animating multiple shadows, be sure to keep the same number of shadows so the animation is smooth. Otherwise, you'll get something choppy.
+*/
+@-webkit-keyframes pulse {
+    25% {
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+    }
+
+    75% {
+        -webkit-transform: scale(0.8);
+        transform: scale(0.8);
+    }
+}
+
+@keyframes pulse {
+    25% {
+        -webkit-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        transform: scale(1.2);
+    }
+
+    75% {
+        -webkit-transform: scale(0.8);
+        -ms-transform: scale(0.8);
+        transform: scale(0.8);
+    }
+}
+
+.pulse {
+    display: inline-block;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+
+    .pulse:hover {
+        -webkit-animation-name: pulse;
+        animation-name: pulse;
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-timing-function: linear;
+        animation-timing-function: linear;
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+    }
