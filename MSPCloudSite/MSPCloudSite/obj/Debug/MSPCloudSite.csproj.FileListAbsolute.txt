@@ -188,3 +188,9 @@ H:\site\MSC\MSPCloudSite\MSPCloudSite\bin\System.Web.Razor.xml
 H:\site\MSC\MSPCloudSite\MSPCloudSite\bin\System.Web.WebPages.xml
 H:\site\MSC\MSPCloudSite\MSPCloudSite\bin\System.Web.WebPages.Deployment.xml
 H:\site\MSC\MSPCloudSite\MSPCloudSite\bin\System.Web.WebPages.Razor.xml
+H:\site\MSC\MSPCloudSite\MSPCloudSite\bin\EntityFramework.dll
+H:\site\MSC\MSPCloudSite\MSPCloudSite\bin\EntityFramework.SqlServer.dll
+H:\site\MSC\MSPCloudSite\MSPCloudSite\bin\System.Data.SQLite.EF6.dll
+H:\site\MSC\MSPCloudSite\MSPCloudSite\bin\EntityFramework.xml
+H:\site\MSC\MSPCloudSite\MSPCloudSite\bin\EntityFramework.SqlServer.xml
+H:\site\MSC\MSPCloudSite\MSPCloudSite\obj\Debug\MSPCloudSite.csprojResolveAssemblyReference.cache

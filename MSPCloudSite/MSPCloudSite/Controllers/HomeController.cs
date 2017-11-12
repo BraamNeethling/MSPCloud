@@ -25,11 +25,6 @@ namespace MSPCloudSite.Controllers
         {
             return View();
         }
-
-        public ActionResult Contact()
-        {
-            return View();
-        }
         public async Task SendEmail(MailViewModel viewModel)
         {
             await _mailerService.SendEmail(viewModel);

@@ -1,7 +1,22 @@
-﻿@{
+﻿@using MSPCloudSite.Models
+@{
     ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<div>
-    <img src="~/Resources/MSPCloud Logo.png"/>
+
+<div id="aboutUsDiv" class="aboutUsBackground">
+    <div class="container body-content">
+        <h2>About Us</h2>
+        <p>
+            <br />
+            MSPCloud is a unique managed support provider whether your ICT environment is on-prem, in the cloud or a hybrid solution.
+            MSPCloud focuses on being the best managed support provider while still offering all the additional ICT services required to run your business successfully.
+            MSPCloud partners with leading ICT companies across the globe to ensure an ICT solution that fits your needs.
+            MSPCloud will provide you with comprehensive IT support giving you the freedom to focus on your business goals.
+        </p>
+    </div>
 </div>
+
+
+@Html.Partial("_contactView")
 
