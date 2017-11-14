@@ -11,37 +11,37 @@
     @RenderSection("scripts", required: false)
 </head>
 <body>
+    @*navbar navbar-inverse*@
+    @*navbar-fixed-top*@
+    <div class="navigationBar">
+        <img src="~/Resources/MSPCloud Logojpeg.jpg" class="navbarImageStyle" />
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
 
-<div class="navbar navbar-inverse navbar-fixed-top">
-    <img src="~/Resources/MSPCloud Logojpeg.jpg" class="navbarImageStyle" />
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-
-            @Html.ActionLink("MSPCloud", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-        </div>
-        <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-                <li>@Html.ActionLink("About", "About", "Home")</li>>
-                <li>@Html.ActionLink("MSPCloud Services", "MSPCloudServices", "Home")</li>
-                <li>@Html.ActionLink("Partner Services", "PartnerServices", "Home")</li>
-                <li>@Html.ActionLink("Contact Us", "Contact", "Contact")</li>
-                <li>@Html.ActionLink("Careers", "Careers", "Home")</li>
-            </ul>
+                @Html.ActionLink("MSPCloud", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("About", "About", "Home")</li>>
+                    <li>@Html.ActionLink("MSPCloud Services", "MSPCloudServices", "Home")</li>
+                    <li>@Html.ActionLink("Partner Services", "PartnerServices", "Home")</li>
+                    <li>@Html.ActionLink("Contact Us", "Contact", "Contact")</li>
+                    <li>@Html.ActionLink("Careers", "Careers", "Home")</li>
+                </ul>
+            </div>
         </div>
     </div>
-</div>
-@*container*@
-    <div class="">
-        @RenderBody()
-        <hr />
-        <footer style="bottom: 1%">
-            <p>&copy; @DateTime.Now.Year - MSP Cloud</p>
+
+    @RenderBody()
+    @*<div style="background-color: #57B7DE">*@
+        <footer style="position: fixed; bottom: 0; background-color: #57b7de; width: 100%; height: 150px; ">
+            <p style="text-align: center">&copy; @DateTime.Now.Year - MSP Cloud</p>
         </footer>
-    </div>
+    @*</div>*@
 </body>
 </html>
