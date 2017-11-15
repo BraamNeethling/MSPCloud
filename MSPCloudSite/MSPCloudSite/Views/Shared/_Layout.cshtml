@@ -11,37 +11,49 @@
     @RenderSection("scripts", required: false)
 </head>
 <body>
-    @*navbar navbar-inverse*@
-    @*navbar-fixed-top*@
-    <div class="navigationBar">
-        <img src="~/Resources/MSPCloud Logojpeg.jpg" class="navbarImageStyle" />
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
+    <div class="page-wrap">
+        <header style="width: 100%;">
+            <a id="imageClick">
+                <img src="~/Resources/MSPCloud Logojpeg.jpg" @*class="navbarImageStyle"*@ class="center" />
+            </a>
+        </header>
 
-                @Html.ActionLink("MSPCloud", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("About", "About", "Home")</li>>
-                    <li>@Html.ActionLink("MSPCloud Services", "MSPCloudServices", "Home")</li>
-                    <li>@Html.ActionLink("Partner Services", "PartnerServices", "Home")</li>
-                    <li>@Html.ActionLink("Contact Us", "Contact", "Contact")</li>
-                    <li>@Html.ActionLink("Careers", "Careers", "Home")</li>
-                </ul>
-            </div>
-        </div>
+        <ul id="menu">
+            <li>@Html.ActionLink("About", "About", "Home")</li>
+            <li>@Html.ActionLink("MSPCloud Services", "MSPCloudServices", "Home")</li>
+            <li>@Html.ActionLink("Partner Services", "PartnerServices", "Home")</li>
+            <li>@Html.ActionLink("Contact Us", "Contact", "Contact")</li>
+            <li>@Html.ActionLink("Careers", "Careers", "Home")</li>
+        </ul>
+
+
+        @RenderBody()
     </div>
+    @*style="position: fixed; bottom: 0; background-color: #7cb3cd; width: 100%; height: 150px;"*@
+    <footer class="site-footer">
+        <ul id="footerText">
+            <li style="float: left; text-align: left;">
+                Contact us for a solution that fits your budget and unique requirements. 
+                <br />
+                Back to Contact Us Page
+            </li>
+            <li style="float: right;text-align: right">
+                SOS Support<br/>
+                Remote support download page http://sos.splashtop.com/
+            </li>
+        </ul>
+         <p style="text-align: center;">&copy; @DateTime.Now.Year - MSPCloud</p>
+    </footer>
 
-    @RenderBody()
-    @*<div style="background-color: #57B7DE">*@
-        <footer style="position: fixed; bottom: 0; background-color: #57b7de; width: 100%; height: 150px; ">
-            <p style="text-align: center">&copy; @DateTime.Now.Year - MSP Cloud</p>
-        </footer>
-    @*</div>*@
 </body>
 </html>
+
+<script type="text/javascript">
+    var sendEmailUrl = '@Url.Action("SendEmail", "Contact")';
+    $("#imageClick").on("click",
+        function () {
+            var redirectUrl = '@Url.Action("Index", "Home")';
+            $.redirect(redirectUrl);
+
+        });
+</script>

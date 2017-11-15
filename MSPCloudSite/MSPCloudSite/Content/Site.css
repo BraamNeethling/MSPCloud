@@ -1,6 +1,10 @@
 ﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+    /*padding-top: 50px;
+    padding-bottom: 20px;*/
+}
+
+html, body {
+    height: 100%;
 }
 
 .body-content {
@@ -17,11 +21,13 @@ select,
 textarea {
     max-width: 280px;
 }
+
 .navbarImageStyle {
     float: left;
     width: 200px;
     height: 59px;
 }
+
 .menu {
     margin: 0px 0 0px 0px;
     padding: 0;
@@ -29,6 +35,11 @@ textarea {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
     font-weight: bold;
+}
+
+.center {
+    display: block !important;
+    margin: auto !important
 }
 
 .submenu {
@@ -42,7 +53,8 @@ textarea {
 }
 
 .aboutUsBackground {
-    background-image: url('../Resources/mscloud-backdrop.jpg');
+    background-color: #7cb3cd;
+    padding-bottom: 10px
 }
 
 .mailerForm {
@@ -58,6 +70,7 @@ textarea {
     margin: 10px auto;
     padding: 16px;
     background: #F7F7F7;
+
 }
 
     .form-style-6 h1 {
@@ -179,7 +192,63 @@ textarea {
 
 .navigationBar {
     background-color: #FFFFFF;
-    display: inline-block;
     border: #7cb3cd;
     border-width: thick;
+}
+
+
+#menu {
+    list-style-type: none;
+    background-color: white;
+    font-family: Arial;
+    font-size: 0.9em;
+    width: 100%;
+    text-align: center
+}
+
+    #menu li {
+        display: inline-block;
+        line-height: 30px;
+    }
+
+        #menu li a {
+            padding: 16px 30px;
+            color: black;
+            text-decoration: none;
+            height: 40px;
+        }
+
+            #menu li a:hover {
+                background-color: #7cb3cd;
+                text-decoration: none;
+                border-radius: 25px;
+            }
+
+
+.page-wrap {
+    margin-bottom: -150px;
+    overflow: auto;
+    overflow-y: scroll;
+    height: 100%;
+}
+
+    .page-wrap:after {
+        content: "";
+        display: block;
+    }
+
+    .site-footer, .page-wrap:after {
+        /* .push must be the same height as footer */
+        height: 150px;
+    }
+
+.site-footer {
+    background: #7cb3cd;
+    position: absolute;
+    width: 100%;
+    display: inline;
+}
+
+#footerText li{
+    display: inline;
 }
