@@ -28,7 +28,10 @@ namespace MSPCloudSite
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css",
-                      "~/Content/sweetalert.css"));
+                      "~/Content/sweetalert.css",
+                      "~/Content/default.css",
+                "~/Content/fonts.css",
+                "~/Content/font-awesome.min.css"));
         }
     }
 }
