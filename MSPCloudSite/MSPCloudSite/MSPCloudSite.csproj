@@ -192,6 +192,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="images\banner.jpg" />
     <Content Include="js\MSPCloudServices\MSPCloudServices.js" />
+    <Content Include="Resources\cloud-computing-1989339.jpg" />
     <Content Include="Resources\mscloud-backdrop.jpg" />
     <Content Include="Resources\MSPCloud Logo.png" />
     <Content Include="Resources\MSPCloud Logojpeg.jpg" />
@@ -220,6 +221,8 @@
     <Content Include="fonts\FontAwesome.otf" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-3.2.1.intellisense.js" />
+    <Content Include="Resources\MSPCloudTrans.gif" />
+    <Content Include="Resources\MSPCtrans.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.2.1.js" />

@@ -299,3 +299,4 @@ H:\site\MSC\MSPCloudSite\MSPCloudSite\bin\System.Web.WebPages.Razor.xml
 H:\site\MSC\MSPCloudSite\MSPCloudSite\obj\Debug\MSPCloudSite.csproj.CoreCompileInputs.cache
 H:\site\MSC\MSPCloudSite\MSPCloudSite\obj\Debug\MSPCloudSite.dll
 H:\site\MSC\MSPCloudSite\MSPCloudSite\obj\Debug\MSPCloudSite.pdb
+H:\site\MSC\MSPCloudSite\MSPCloudSite\obj\Debug\MSPCloudSite.csprojResolveAssemblyReference.cache
