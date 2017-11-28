@@ -192,6 +192,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="images\banner.jpg" />
     <Content Include="js\MSPCloudServices\MSPCloudServices.js" />
+    <Content Include="Resources\CareersImage.png" />
     <Content Include="Resources\cloud-computing-1989339.jpg" />
     <Content Include="Resources\mscloud-backdrop.jpg" />
     <Content Include="Resources\MSPCloud Logo.png" />
