@@ -21,11 +21,13 @@
             </div>
             <div id="menu">
                 <ul>
-                    <li class="active"><a href="#" accesskey="1" title="">Homepage</a></li>
-                    <li><a href="#five-column" accesskey="2" title="">Partner Services</a></li>
-                    <li><a href="#welcome" accesskey="3" title="">About Us</a></li>
-                    <li><a href="#" accesskey="4" title="">Careers</a></li>
-                    <li><a href="#portfolio" accesskey="5" title="">Contact Us</a></li>
+                    <li><a id="home" accesskey="1" title="">Home</a></li>
+                    <li><a id="partnerServices"@*href="#five-column"*@ accesskey="2" title="">Partner Services</a></li>
+                    <li><a id="aboutUs" accesskey="3" title="">About Us</a></li>
+                    <li>
+                        <div id="careers"><a accesskey="4" title="">Careers</a>
+                        </div></li>
+                    <li><a id="contactUs" accesskey="5" title="">Contact Us</a></li>
                 </ul>
             </div>
         </div>
@@ -70,6 +72,38 @@
     $("#imageClick").on("click",
         function () {
             var redirectUrl = '@Url.Action("Index", "Home")';
+            $.redirect(redirectUrl);
+
+        });
+    $("#careers").on("click",
+        function () {
+            var redirectUrl = '@Url.Action("Careers", "Home")';
+            $.redirect(redirectUrl);
+
+        });
+    $("#home").on("click",
+        function () {
+            var redirectUrl = '@Url.Action("Index", "Home")';
+            $.redirect(redirectUrl);
+
+        });
+    $("#partnerServices").on("click",
+        function () {
+            var redirectUrl = '@Url.Action("Index", "Home")' + "#five-column";
+            $.redirect(redirectUrl);
+
+        });
+
+    $("#aboutUs").on("click",
+        function () {
+            var redirectUrl = '@Url.Action("Index", "Home")' + "#welcome";
+            $.redirect(redirectUrl);
+
+        });
+
+    $("#contactUs").on("click",
+        function () {
+            var redirectUrl = '@Url.Action("Index", "Home")' + "#portfolio";
             $.redirect(redirectUrl);
 
         });

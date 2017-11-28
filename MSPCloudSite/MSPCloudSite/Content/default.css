@@ -653,7 +653,7 @@
 	{
 		overflow: hidden;
 		margin-top: 5em;
-		padding-top: 1em;
+		padding-top: 0em;
 		border-top: 1px solid rgba(0,0,0,0.2);
 		text-align: center;
 	}
@@ -669,7 +669,7 @@
 	{
 		position: relative;
 		display: inline-block;
-		margin: 0px auto 0.80em auto;
+		margin: 0px auto 1em auto;
 		background: none;
 		line-height: 150px;
 		font-size: 4em;
@@ -689,9 +689,10 @@
 	#five-column #tbox5,
 	#five-column #tbox6
 	{
-		float:left;
+	    text-align: center;
+	    float: left;
 		width: 350px;
-		padding: 10px 60px 10px 40px;
+		padding: 10px 60px 10px 60px;
         
 	}
 	
